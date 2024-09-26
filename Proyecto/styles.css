@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3a260b;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.sidebar {
+    width: 15%;
+    background-color: #512F10;
+    padding: 20px;
+    height: 100vh;
+}
+
+.content {
+    width: 65%;
+}
+
+.task-list {
+    width: 20%;
+    background-color: #1f1f1f;
+    padding: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.task-item span {
+    margin-right: 10px;
+}
+
+.task-item .status {
+    font-size: 1.5em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 1.5em;
+}
+
+.user {
+    font-size: 1em;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.option {
+    background-color: #3f3f3f;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.option h3 {
+    margin: 0 0 10px 0;
+}
+
+.option button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffa500;
+    color: #fff;
+    cursor: pointer;
+}
