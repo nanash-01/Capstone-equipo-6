@@ -3,78 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitaLink</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AbuLink</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Barra lateral -->
         <div class="sidebar">
-            <img src="logo.png" alt="VitaLink Logo">
-            <ul>
-                <li>Opción 1</li>
-                <li>Opción 2</li>
-                <li>Opción 3</li>
-                <li>Opción 4</li>
-            </ul>
+            <div class="logo">
+                <img id="logoHome" src="img/logoHorizontal.png" alt="Logo AbuLink">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Alarma</a></li>
+                    <li><a href="#">Mensajes</a></li>
+                    <li><a href="#">Ajustes</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <!-- Main Content -->
+        <!-- Contenido principal -->
         <div class="content">
-            <div class="header">
-                <div class="logo">
-                    <img src="logo.png" alt="VitaLink">
-                    <span class="header-title">Tecnología que refleja nuestro cuidado</span>
-                </div>
-                <div class="user">
-                    Olivia Wilson - Cuidador
-                </div>
-            </div>
-
+            <h1>Opciones</h1>
             <div class="options">
-                <div class="option">
-                    <h3>ESCRIBIRLE</h3>
-                    <button>Ir</button>
+                <div class="option-item">
+                    <h3>Escribir</h3>
+                    <p>Crea una nota para tu abuelo</p>
+                    <button>R</button>
                 </div>
-                <div class="option">
-                    <h3>REUNIRSE</h3>
-                    <button>Ir</button>
+                <div class="option-item">
+                    <h3>Reunirse</h3>
+                    <p>Reúnete por llamada con tu abuelo</p>
+                    <button>R</button>
                 </div>
-                <div class="option">
-                    <h3>Opción 3</h3>
-                    <button>Ir</button>
+                <div class="option-item">
+                    <h3>Escribir</h3>
+                    <p>Crea una nota para tu abuelo</p>
+                    <button>R</button>
                 </div>
-                <div class="option">
-                    <h3>Opción 4</h3>
-                    <button>Ir</button>
+                <div class="option-item">
+                    <h3>Reunirse</h3>
+                    <p>Reúnete por llamada con tu abuelo</p>
+                    <button>R</button>
+                </div>
+                <!-- Cuadros adicionales -->
+                <div class="option-item">
+                    <h3>Escribir</h3>
+                    <p>Crea una nota para tu abuelo</p>
+                    <button>R</button>
+                </div>
+                <div class="option-item">
+                    <h3>Reunirse</h3>
+                    <p>Reúnete por llamada con tu abuelo</p>
+                    <button>R</button>
+                </div>
+                <div class="option-item">
+                    <h3>Escribir</h3>
+                    <p>Crea una nota para tu abuelo</p>
+                    <button>R</button>
+                </div>
+                <div class="option-item">
+                    <h3>Reunirse</h3>
+                    <p>Reúnete por llamada con tu abuelo</p>
+                    <button>R</button>
                 </div>
             </div>
-        </div>
 
-        <!-- Task List -->
-        <div class="task-list">
-            <h3>Listado de Tareas</h3>
-            <div class="task-item">
-                <span>Pastilla 1 (Paracetamol 500mg)</span>
-                <span class="status">&#10003;</span>
-            </div>
-            <div class="task-item">
-                <span>Pastilla 2 (Ibuprofeno 600mg)</span>
-                <span class="status" style="color: red;">&#10007;</span>
-            </div>
-            <div class="task-item">
-                <span>Salir a pasear</span>
-                <span class="status">&#10003;</span>
-            </div>
-            <div class="task-item">
-                <span>Almuerzo</span>
-                <span class="status">&#10003;</span>
-            </div>
-            <div class="task-item">
-                <span>Cena</span>
-                <span class="status">&#9888;</span>
+            <h1>Listado de Tareas</h1>
+            <div class="task-list">
+                <div class="task-item">
+                    <span>Pastilla 1: Paracetamol 500Mg</span>
+                    <span class="status" onclick="toggleOptions(this)">✔</span>
+                    <div class="options-dropdown">
+                        <button onclick="changeStatus(this, 'checked')">Listo</button>
+                        <button onclick="changeStatus(this, 'unchecked')">No Listo</button>
+                        <button onclick="changeStatus(this, 'warning')">Pendiente</button>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <span>Pastilla 2: Ibuprofeno 600Mg</span>
+                    <span class="status" onclick="toggleOptions(this)">✖</span>
+                    <div class="options-dropdown">
+                        <button onclick="changeStatus(this, 'checked')">Listo</button>
+                        <button onclick="changeStatus(this, 'unchecked')">No Listo</button>
+                        <button onclick="changeStatus(this, 'warning')">Pendiente</button>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <span>Salir a pasear: Caminar por la plaza</span>
+                    <span class="status" onclick="toggleOptions(this)">✔</span>
+                    <div class="options-dropdown">
+                        <button onclick="changeStatus(this, 'checked')">Listo</button>
+                        <button onclick="changeStatus(this, 'unchecked')">No Listo</button>
+                        <button onclick="changeStatus(this, 'warning')">Pendiente</button>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <span>Almuerzo: Calentar el almuerzo</span>
+                    <span class="status" onclick="toggleOptions(this)">✔</span>
+                    <div class="options-dropdown">
+                        <button onclick="changeStatus(this, 'checked')">Listo</button>
+                        <button onclick="changeStatus(this, 'unchecked')">No Listo</button>
+                        <button onclick="changeStatus(this, 'warning')">Pendiente</button>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <span>Cena: Calentar la cena</span>
+                    <span class="status" onclick="toggleOptions(this)">!</span>
+                    <div class="options-dropdown">
+                        <button onclick="changeStatus(this, 'checked')">Listo</button>
+                        <button onclick="changeStatus(this, 'unchecked')">No Listo</button>
+                        <button onclick="changeStatus(this, 'warning')">Pendiente</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="js/funcion.js"></script>
 </body>
 </html>
