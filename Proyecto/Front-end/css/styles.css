@@ -191,6 +191,6 @@ h1 {
 }
 
 #logoHome {
-    max-width: 100%; /* Se ajusta al ancho del contenedor */
+    max-width: 75%; /* Se ajusta al ancho del contenedor */
     height: auto; /* Mantiene la proporción */
 }
