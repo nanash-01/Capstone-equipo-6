@@ -21,6 +21,10 @@ from Tareas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home),
+    path('',views.home,name='home'),
+    path('inicio/',views.inicio,name='inicio'),
+    path('Registro/',views.Registro,name='Registro'),
+    path('Principal/',views.Principal,name='Principal'),
+    
 
 ]
